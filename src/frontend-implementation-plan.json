@@ -1,0 +1,161 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Tech Service Hub Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Display service listing page with repair services, descriptions, and pricing retrieved from backend",
+      "acceptanceCriteria": [
+        "Display at least 3-5 common repair services (e.g., hardware repair, software troubleshooting, virus removal, data recovery, upgrades)",
+        "Each service shows a name, description, and price or price range",
+        "Services are stored in the backend and retrieved via query"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "create",
+          "description": "Create services listing page that fetches all services using getAllServices() backend method and displays them in a grid layout with name, description, and formatted price"
+        },
+        {
+          "path": "frontend/src/hooks/useServices.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch services from backend using getAllServices() method with loading and error states"
+        },
+        {
+          "path": "frontend/src/components/ServiceCard.tsx",
+          "operation": "create",
+          "description": "Create reusable service card component to display individual service with name, description, and price formatted from bigint"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /services that renders ServicesPage component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Display product catalog page with computers and parts showing specifications and prices from backend",
+      "acceptanceCriteria": [
+        "Display products in a grid or list layout",
+        "Each product shows image, name, key specifications, and price",
+        "Products are categorized (e.g., laptops, desktops, components)",
+        "Product data is stored and retrieved from the backend"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductsPage.tsx",
+          "operation": "create",
+          "description": "Create products catalog page that fetches all products using getAllProducts() backend method and displays them in a responsive grid with filtering by category"
+        },
+        {
+          "path": "frontend/src/hooks/useProducts.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch products from backend using getAllProducts() method with caching and error handling"
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create product card component displaying product name, specifications, price, and placeholder image with proper formatting"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /products that renders ProductsPage component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement service request form for customers to submit repair requests with validation and backend submission",
+      "acceptanceCriteria": [
+        "Form includes fields for customer name, contact information, device type, and problem description",
+        "Form validates required fields before submission",
+        "Submitted requests are stored in the backend with a unique ID and timestamp",
+        "User receives confirmation after successful submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/RequestServicePage.tsx",
+          "operation": "create",
+          "description": "Create service request form page with fields for customerName, deviceDetails, and issueDescription that calls submitServiceRequest() backend method and shows success/error feedback"
+        },
+        {
+          "path": "frontend/src/hooks/useServiceRequest.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook for submitting service requests using submitServiceRequest() method with optimistic updates and error handling"
+        },
+        {
+          "path": "frontend/src/components/ServiceRequestForm.tsx",
+          "operation": "create",
+          "description": "Create controlled form component with validation for required fields (customerName, deviceDetails, issueDescription) and submission handling"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /request-service that renders RequestServicePage component and wire it into navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply professional tech-focused visual theme with slate grays, electric greens, and crisp whites throughout the application",
+      "acceptanceCriteria": [
+        "Apply consistent color scheme throughout the application",
+        "Use modern, readable typography suitable for a technical service business",
+        "Create a professional layout with clear navigation and sections",
+        "Ensure visual hierarchy guides users through services, products, and contact options"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to include tech-focused color palette with CSS custom properties for slate grays, electric greens, and crisp whites as primary theme colors"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom colors for slate gray variants, electric green accents, and white backgrounds, plus modern typography settings for technical aesthetic"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create main layout component with header navigation, footer, and consistent spacing that applies theme colors and wraps all pages"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with Layout component to apply consistent theme and navigation structure across the application"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Display generated brand images including tech-themed logo and hero background as static assets",
+      "acceptanceCriteria": [
+        "Display logo in the header/navigation area",
+        "Use hero background on the landing page",
+        "Images load from frontend/public/assets/generated directory",
+        "Images are properly sized and optimized for web display"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add logo image to header navigation using src='/assets/generated/logo.dim_200x200.png' with proper alt text and sizing"
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create landing page with hero section using frontend/public/assets/generated/hero-bg.dim_1920x600.png as background image, featuring introductory content about Tech Service Hub services"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for / (root path) that renders HomePage component as the default landing page"
+        }
+      ]
+    }
+  ]
+}

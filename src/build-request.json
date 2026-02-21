@@ -1,0 +1,134 @@
+{
+  "kind": "build_request",
+  "title": "Create computer repair and sales service application",
+  "projectName": "Tech Service Hub",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a service listing page displaying available computer repair services with descriptions and pricing",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "computer  repair & sale or service"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Display at least 3-5 common repair services (e.g., hardware repair, software troubleshooting, virus removal, data recovery, upgrades)",
+        "Each service shows a name, description, and price or price range",
+        "Services are stored in the backend and retrieved via query"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a product catalog page for computer sales showing available computers and parts with specifications and prices",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "computer  repair & sale or service"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Display products in a grid or list layout",
+        "Each product shows image, name, key specifications, and price",
+        "Products are categorized (e.g., laptops, desktops, components)",
+        "Product data is stored and retrieved from the backend"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a service request form where customers can submit repair requests with device details and issue description",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "computer  repair & sale or service"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes fields for customer name, contact information, device type, and problem description",
+        "Form validates required fields before submission",
+        "Submitted requests are stored in the backend with a unique ID and timestamp",
+        "User receives confirmation after successful submission"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a backend data model to store service requests, repair services, and products for sale",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "computer  repair & sale or service"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Define stable types for ServiceRequest, RepairService, and Product",
+        "Implement CRUD operations for managing services and products",
+        "Store service requests with status tracking (pending, in-progress, completed)",
+        "Use stable variables to persist data across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Design a professional, tech-focused visual theme with a modern layout emphasizing trust and technical expertise, using a color palette of slate grays, electric greens, and crisp whites",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Apply consistent color scheme throughout the application",
+        "Use modern, readable typography suitable for a technical service business",
+        "Create a professional layout with clear navigation and sections",
+        "Ensure visual hierarchy guides users through services, products, and contact options"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Render generated brand images including a tech-themed logo and hero background as static assets in frontend/public/assets/generated",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Display logo in the header/navigation area",
+        "Use hero background on the landing page",
+        "Images load from frontend/public/assets/generated directory",
+        "Images are properly sized and optimized for web display"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use single-actor Motoko architecture for all backend logic",
+    "Frontend must use React, TypeScript, Tailwind CSS, and React Query",
+    "Do not modify immutable frontend paths including useInternetIdentity hooks and main.tsx"
+  ],
+  "nonGoals": [
+    "Payment processing integration",
+    "Real-time chat support",
+    "Inventory management system",
+    "Customer account authentication",
+    "Shipping and logistics tracking"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern tech-themed logo featuring circuit board or computer chip elements in electric green and slate gray (logo.dim_200x200.png)",
+      "Professional hero background showing abstract tech patterns or workspace with computers in slate gray tones (hero-bg.dim_1920x600.png)"
+    ],
+    "edits": []
+  }
+}

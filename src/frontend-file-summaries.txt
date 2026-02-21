@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home, services, products, and request service pages wrapped in a Layout component.",
+  "frontend/src/components/Layout.tsx": "Main layout component with sticky header navigation, logo, mobile menu, and footer with social links and attribution.",
+  "frontend/src/pages/HomePage.tsx": "Landing page with hero section using generated background image, feature cards, services overview, and call-to-action sections.",
+  "frontend/src/pages/ServicesPage.tsx": "Services listing page that fetches and displays all repair services from the backend in a responsive grid with loading and error states.",
+  "frontend/src/pages/ProductsPage.tsx": "Products catalog page that fetches and displays all products from the backend in a responsive grid with loading and error states.",
+  "frontend/src/pages/RequestServicePage.tsx": "Service request page with form component and informational cards about the service process.",
+  "frontend/src/components/ServiceCard.tsx": "Reusable card component for displaying individual service with name, description, and formatted price.",
+  "frontend/src/components/ProductCard.tsx": "Reusable card component for displaying individual product with placeholder icon, name, specifications, and formatted price.",
+  "frontend/src/components/ServiceRequestForm.tsx": "Controlled form component with validation for submitting service requests, including success and error feedback.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching services, products, and service requests from the backend, plus mutation hook for submitting service requests.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring tech-focused palette of slate grays, electric green accents, and crisp whites for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom tech-green color, Inter font family, and design tokens matching the professional tech aesthetic."
+}
