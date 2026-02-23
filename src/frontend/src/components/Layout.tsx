@@ -22,10 +22,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/" className="flex items-center gap-3">
             <img 
               src="/assets/generated/logo.dim_200x200.png" 
-              alt="Tech Service Hub Logo" 
+              alt="TestAut Logo" 
               className="h-10 w-10"
             />
-            <span className="text-xl font-bold text-tech-green">Tech Service Hub</span>
+            <span className="text-xl font-bold text-tech-green">TestAut</span>
           </Link>
 
           {/* Desktop Navigation */}

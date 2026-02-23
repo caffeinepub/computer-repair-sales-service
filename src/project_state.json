@@ -1,11 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Computer repair & sale or service application",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Modern tech-themed logo featuring circuit board or computer chip elements in electric green and slate gray (logo.dim_200x200.png)\n- Professional hero background showing abstract tech patterns or workspace with computers in slate gray tones (hero-bg.dim_1920x600.png)",
   "existing_features": [
     {
       "id": "feature-create-a-service-listing-page-displaying-available-computer-repair-services-with-descriptions-and-pricing",
@@ -44,6 +43,14 @@
       "title": "Render generated brand images including a tech-themed logo and hero background as static assets in frontend/public/assets/generated",
       "reqIds": [
         "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-application-name-displayed-in-the-header-navigation-to-testaut-the-change-should-apply-to-the-link-element-and-span-element-identified-by-xpath-html-1-body-1-div-1-div-1-header-1-div-1-a-1-and-html-1-body-1-div-1-div-1-header-1-div-1-a-1-span-1-which-correspond-to-the-logo-brand-name-in-the-layout-component",
+      "title": "Update the application name displayed in the header navigation to 'TestAut'. The change should apply to the link element and span element identified by XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/a[1] and /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/a[1]/span[1], which correspond to the logo/brand name in the Layout component.",
+      "reqIds": [
+        "REQ-7"
       ],
       "version": 1
     }

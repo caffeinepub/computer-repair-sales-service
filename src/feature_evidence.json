@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-service-listing-page-displaying-available-computer-repair-services-with-descriptions-and-pricing",
-      "featureTitle": "Create a service listing page displaying available computer repair services with descriptions and pricing",
+      "featureId": "feature-update-the-application-name-displayed-in-the-header-navigation-to-testaut-the-change-should-apply-to-the-link-element-and-span-element-identified-by-xpath-html-1-body-1-div-1-div-1-header-1-div-1-a-1-and-html-1-body-1-div-1-div-1-header-1-div-1-a-1-span-1-which-correspond-to-the-logo-brand-name-in-the-layout-component",
+      "featureTitle": "Update the application name displayed in the header navigation to 'TestAut'. The change should apply to the link element and span element identified by XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/a[1] and /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/a[1]/span[1], which correspond to the logo/brand name in the Layout component.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ServiceCard.tsx",
-        "frontend/src/pages/ServicesPage.tsx"
+        "frontend/src/components/Layout.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,88 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-product-catalog-page-for-computer-sales-showing-available-computers-and-parts-with-specifications-and-prices",
-      "featureTitle": "Create a product catalog page for computer sales showing available computers and parts with specifications and prices",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ProductCard.tsx",
-        "frontend/src/pages/ProductsPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-a-service-request-form-where-customers-can-submit-repair-requests-with-device-details-and-issue-description",
-      "featureTitle": "Implement a service request form where customers can submit repair requests with device details and issue description",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ServiceRequestForm.tsx",
-        "frontend/src/pages/RequestServicePage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-design-a-professional-tech-focused-visual-theme-with-a-modern-layout-emphasizing-trust-and-technical-expertise-using-a-color-palette-of-slate-grays-electric-greens-and-crisp-whites",
-      "featureTitle": "Design a professional, tech-focused visual theme with a modern layout emphasizing trust and technical expertise, using a color palette of slate grays, electric greens, and crisp whites",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-render-generated-brand-images-including-a-tech-themed-logo-and-hero-background-as-static-assets-in-frontend-public-assets-generated",
-      "featureTitle": "Render generated brand images including a tech-themed logo and hero background as static assets in frontend/public/assets/generated",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/pages/HomePage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
+        "REQ-7"
       ],
       "confidence": "high"
     }

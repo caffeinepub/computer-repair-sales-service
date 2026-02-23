@@ -1,6 +1,6 @@
 {
   "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home, services, products, and request service pages wrapped in a Layout component.",
-  "frontend/src/components/Layout.tsx": "Main layout component with sticky header navigation, logo, mobile menu, and footer with social links and attribution.",
+  "frontend/src/components/Layout.tsx": "Main layout component with sticky header navigation displaying \"TestAut\" as the application name, mobile menu, and footer with social links and attribution.",
   "frontend/src/pages/HomePage.tsx": "Landing page with hero section using generated background image, feature cards, services overview, and call-to-action sections.",
   "frontend/src/pages/ServicesPage.tsx": "Services listing page that fetches and displays all repair services from the backend in a responsive grid with loading and error states.",
   "frontend/src/pages/ProductsPage.tsx": "Products catalog page that fetches and displays all products from the backend in a responsive grid with loading and error states.",
